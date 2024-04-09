@@ -1,4 +1,5 @@
 import { Theme } from "theme.slint";
+import { Panel } from "widgets/panel.slint";
 
 export component ObjectToolPanel inherits Rectangle {
     width: 280px;
@@ -18,233 +19,140 @@ export component ObjectToolPanel inherits Rectangle {
             }
         }
 
-        Rectangle {
-            border-color: black;
-            border-width: 1px;
-            border-radius: Theme.radius-md;
-            clip: true;
+        Panel {
+            title: @tr("Favourites");
 
-            VerticalLayout {
-                Rectangle {
+            Panel {
+                title: "Group Name";
+                title-alignment: center;
+                content-padding: 0px;
+                content-spacing: 0px;
+                HorizontalLayout {
                     height: Theme.size-md;
-                    border-color: black;
-                    border-width: 1px;
-                    HorizontalLayout {
-                        padding-left: Theme.padding-md;
-                        padding-right: Theme.padding-md;
-                        Text {
-                            font-size: Theme.font-md;
-                            text: @tr("Favourites");
-                            vertical-alignment: center;
-                        }
+                    padding-left: Theme.padding-md;
+                    padding-right: Theme.padding-md;
+                    Text {
+                        font-size: Theme.font-md;
+                        text: "Object Name";
+                        vertical-alignment: center;
                     }
                 }
 
-                VerticalLayout {
-                    padding: Theme.padding-md;
-                    spacing: Theme.spacing-md;
-
-                    Rectangle {
-                        border-color: black;
-                        border-width: 1px;
-                        border-radius: Theme.radius-md;
-                        clip: true;
-                        VerticalLayout {
-                            Rectangle {
-                                height: Theme.size-md;
-                                border-color: black;
-                                border-width: 1px;
-                                HorizontalLayout {
-                                    padding-left: Theme.padding-md;
-                                    padding-right: Theme.padding-md;
-                                    Text {
-                                        font-size: Theme.font-md;
-                                        text: "Group Name";
-                                        vertical-alignment: center;
-                                        horizontal-alignment: center;
-                                    }
-                                }
-                            }
-
-                            HorizontalLayout {
-                                height: Theme.size-md;
-                                padding-left: Theme.padding-md;
-                                padding-right: Theme.padding-md;
-                                Text {
-                                    font-size: Theme.font-md;
-                                    text: "Object Name";
-                                    vertical-alignment: center;
-                                }
-                            }
-
-                            HorizontalLayout {
-                                height: Theme.size-md;
-                                padding-left: Theme.padding-md;
-                                padding-right: Theme.padding-md;
-                                Text {
-                                    font-size: Theme.font-md;
-                                    text: "Object Name";
-                                    vertical-alignment: center;
-                                }
-                            }
-
-                            HorizontalLayout {
-                                height: Theme.size-md;
-                                padding-left: Theme.padding-md;
-                                padding-right: Theme.padding-md;
-                                Text {
-                                    font-size: Theme.font-md;
-                                    text: "Object Name";
-                                    vertical-alignment: center;
-                                }
-                            }
-                        }
+                HorizontalLayout {
+                    height: Theme.size-md;
+                    padding-left: Theme.padding-md;
+                    padding-right: Theme.padding-md;
+                    Text {
+                        font-size: Theme.font-md;
+                        text: "Object Name";
+                        vertical-alignment: center;
                     }
                 }
 
-                VerticalLayout {
-                    padding: Theme.padding-md;
-                    spacing: Theme.spacing-md;
+                HorizontalLayout {
+                    height: Theme.size-md;
+                    padding-left: Theme.padding-md;
+                    padding-right: Theme.padding-md;
+                    Text {
+                        font-size: Theme.font-md;
+                        text: "Object Name";
+                        vertical-alignment: center;
+                    }
+                }
+            }
 
-                    Rectangle {
-                        border-color: black;
-                        border-width: 1px;
-                        border-radius: Theme.radius-md;
-                        clip: true;
-                        VerticalLayout {
-                            Rectangle {
-                                height: Theme.size-md;
-                                border-color: black;
-                                border-width: 1px;
-                                HorizontalLayout {
-                                    padding-left: Theme.padding-md;
-                                    padding-right: Theme.padding-md;
-                                    Text {
-                                        font-size: Theme.font-md;
-                                        text: "Group Name";
-                                        vertical-alignment: center;
-                                        horizontal-alignment: center;
-                                    }
-                                }
-                            }
+            Panel {
+                title: "Group Name";
+                title-alignment: center;
+                content-padding: 0px;
+                content-spacing: 0px;
+                HorizontalLayout {
+                    height: Theme.size-md;
+                    padding-left: Theme.padding-md;
+                    padding-right: Theme.padding-md;
+                    Text {
+                        font-size: Theme.font-md;
+                        text: "Object Name";
+                        vertical-alignment: center;
+                    }
+                }
 
-                            HorizontalLayout {
-                                height: Theme.size-md;
-                                padding-left: Theme.padding-md;
-                                padding-right: Theme.padding-md;
-                                Text {
-                                    font-size: Theme.font-md;
-                                    text: "Object Name";
-                                    vertical-alignment: center;
-                                }
-                            }
+                HorizontalLayout {
+                    height: Theme.size-md;
+                    padding-left: Theme.padding-md;
+                    padding-right: Theme.padding-md;
+                    Text {
+                        font-size: Theme.font-md;
+                        text: "Object Name";
+                        vertical-alignment: center;
+                    }
+                }
 
-                            HorizontalLayout {
-                                height: Theme.size-md;
-                                padding-left: Theme.padding-md;
-                                padding-right: Theme.padding-md;
-                                Text {
-                                    font-size: Theme.font-md;
-                                    text: "Object Name";
-                                    vertical-alignment: center;
-                                }
-                            }
-
-                            HorizontalLayout {
-                                height: Theme.size-md;
-                                padding-left: Theme.padding-md;
-                                padding-right: Theme.padding-md;
-                                Text {
-                                    font-size: Theme.font-md;
-                                    text: "Object Name";
-                                    vertical-alignment: center;
-                                }
-                            }
-                        }
+                HorizontalLayout {
+                    height: Theme.size-md;
+                    padding-left: Theme.padding-md;
+                    padding-right: Theme.padding-md;
+                    Text {
+                        font-size: Theme.font-md;
+                        text: "Object Name";
+                        vertical-alignment: center;
                     }
                 }
             }
         }
 
-        Rectangle {
-            border-color: black;
-            border-width: 1px;
-            border-radius: Theme.radius-md;
-            clip: true;
-
-            VerticalLayout {
+        Panel {
+            title: @tr("Hierarchy");
+            HorizontalLayout {
+                spacing: Theme.spacing-md;
+                height: Theme.size-md;
+                Text {
+                    font-size: Theme.font-md;
+                    vertical-alignment: center;
+                    text: @tr("Name:");
+                }
 
                 Rectangle {
-                    height: Theme.size-md;
                     border-color: black;
                     border-width: 1px;
-                    HorizontalLayout {
-                        padding-left: Theme.padding-md;
-                        padding-right: Theme.padding-md;
-                        Text {
-                            font-size: Theme.font-md;
-                            text: @tr("Hierarchy");
-                            vertical-alignment: center;
-                        }
+                    border-radius: Theme.radius-md;
+
+                    Text {
+                        font-size: Theme.font-md;
+                        vertical-alignment: center;
+                        horizontal-alignment: left;
+                        text: "VicHutch (-514)";
                     }
                 }
 
-                VerticalLayout {
-                    padding: Theme.padding-md;
-                    spacing: Theme.spacing-md;
+                Rectangle {
+                    border-color: black;
+                    border-width: 1px;
+                    border-radius: Theme.radius-md;
 
-                    HorizontalLayout {
-                        spacing: Theme.spacing-md;
-                        height: Theme.size-md;
-                        Text {
-                            font-size: Theme.font-md;
-                            vertical-alignment: center;
-                            text: @tr("Name:");
-                        }
+                    width: Theme.size-md;
+                }
 
-                        Rectangle {
-                            border-color: black;
-                            border-width: 1px;
-                            border-radius: Theme.radius-md;
+                Rectangle {
+                    border-color: black;
+                    border-width: 1px;
+                    border-radius: Theme.radius-md;
 
-                            Text {
-                                font-size: Theme.font-md;
-                                vertical-alignment: center;
-                                horizontal-alignment: left;
-                                text: "VicHutch (-514)";
-                            }
-                        }
+                    width: Theme.size-md;
+                }
+            }
 
-                        Rectangle {
-                            border-color: black;
-                            border-width: 1px;
-                            border-radius: Theme.radius-md;
+            Rectangle {
+                border-color: black;
+                border-width: 1px;
+                border-radius: Theme.radius-md;
+                clip: true;
 
-                            width: Theme.size-md;
-                        }
-
-                        Rectangle {
-                            border-color: black;
-                            border-width: 1px;
-                            border-radius: Theme.radius-md;
-
-                            width: Theme.size-md;
-                        }
-                    }
-
-                    Rectangle {
-                        border-color: black;
-                        border-width: 1px;
-                        border-radius: Theme.radius-md;
-                        clip: true;
-
-                        Text {
-                            font-size: Theme.font-lg;
-                            text: "INSERT TREE VIEW HERE";
-                            vertical-alignment: center;
-                            horizontal-alignment: center;
-                        }
-                    }
+                Text {
+                    font-size: Theme.font-lg;
+                    text: "INSERT TREE VIEW HERE";
+                    vertical-alignment: center;
+                    horizontal-alignment: center;
                 }
             }
         }
