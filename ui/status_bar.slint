@@ -1,4 +1,5 @@
 import { Theme } from "theme.slint";
+import { VerticalSeparator } from "widgets/separator.slint";
 
 export component StatusBar inherits Rectangle {
     border-color: black;
@@ -14,23 +15,13 @@ export component StatusBar inherits Rectangle {
             text: "Last saved: 18:50";
         }
 
-        Path {
-            width: 1px;
-            stroke: black;
-            stroke-width: 1px;
-            commands: "M 0 0 L 0 24 Z";
-        }
+        VerticalSeparator { }
 
         Text {
             vertical-alignment: center;
             text: "Saved by: Jayrude";
         }
 
-        Path {
-            width: 1px;
-            stroke: black;
-            stroke-width: 1px;
-            commands: "M 0 0 L 0 24 Z";
-        }
+        VerticalSeparator { }
     }
 }
