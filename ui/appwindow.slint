@@ -2,6 +2,7 @@ import { Theme } from "theme.slint";
 import { EditorBar } from "editor_bar.slint";
 import { StatusBar } from "status_bar.slint";
 import { ToolBar } from "tool_bar.slint";
+import { ObjectToolPanel } from "object_tool_panel.slint";
 
 export component AppWindow inherits Window {
     title: @tr("FM Editor");
@@ -11,8 +12,20 @@ export component AppWindow inherits Window {
         EditorBar { }
 
         HorizontalLayout {
-            alignment: start;
             ToolBar { }
+
+            ObjectToolPanel { }
+
+            Rectangle {
+                Text {
+                    font-size: Theme.font-lg;
+                    text: "INSERT VIEWPORT HERE";
+                    vertical-alignment: center;
+                    horizontal-alignment: center;
+                }
+            }
+
+            ObjectToolPanel { }
         }
 
         StatusBar { }
