@@ -1,0 +1,17 @@
+import { Theme } from "theme.slint";
+
+export component EditorBar inherits Rectangle {
+    height: Theme.size-xl;
+    border-color: black;
+    border-width: 1px;
+
+    HorizontalLayout {
+        alignment: start;
+        padding: Theme.padding-md;
+        spacing: Theme.padding-xl;
+        Text {
+            vertical-alignment: center;
+            text: "Damn look at all the options and shit here it's like Hammer 2!!";
+        }
+    }
+}

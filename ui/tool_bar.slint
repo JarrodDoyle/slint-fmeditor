@@ -1,0 +1,68 @@
+import { Theme } from "theme.slint";
+import { Button } from "std-widgets.slint";
+
+component ToolBarItem inherits Rectangle {
+    width: Theme.size-lg;
+    height: Theme.size-lg;
+    border-color: black;
+    border-width: 1px;
+    border-radius: Theme.radius-md;
+}
+
+export component ToolBar inherits Rectangle {
+    width: Theme.size-xl;
+    border-color: black;
+    border-width: 1px;
+
+    VerticalLayout {
+        alignment: start;
+        padding: Theme.padding-md;
+        spacing: Theme.padding-md;
+
+        Button {
+            checkable: true;
+        }
+
+        ToolBarItem { }
+
+        ToolBarItem { }
+
+        ToolBarItem { }
+
+        ToolBarItem { }
+
+        Path {
+            width: 32px;
+            height: 1px;
+            stroke: black;
+            stroke-width: 1px;
+            commands: "M 0 0 L 32 0 Z";
+        }
+
+        ToolBarItem { }
+
+        ToolBarItem { }
+
+        ToolBarItem { }
+
+        ToolBarItem { }
+
+        ToolBarItem { }
+
+        ToolBarItem { }
+
+        Path {
+            width: 32px;
+            height: 1px;
+            stroke: black;
+            stroke-width: 1px;
+            commands: "M 0 0 L 32 0 Z";
+        }
+
+        ToolBarItem { }
+
+        ToolBarItem { }
+
+        ToolBarItem { }
+    }
+}
