@@ -45,3 +45,16 @@ export component VerticalBox inherits Rectangle {
         @children
     }
 }
+
+export component Box inherits Rectangle {
+    in property <int> j-elevation: 1;
+    in property <length> j-rounding: Metrics.radius-md;
+    in property <length> j-padding: Metrics.padding-md;
+
+    background: DarkPalette.background[j-elevation];
+    border-radius: j-rounding;
+    clip: true;
+    padding: j-padding;
+
+    @children
+}

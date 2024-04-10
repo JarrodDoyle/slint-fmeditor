@@ -1,6 +1,6 @@
 import { Metrics, DarkPalette } from "theme.slint";
 import { Panel } from "widgets/panel.slint";
-import { HorizontalBox, VerticalBox } from "widgets/layout.slint";
+import { Box, HorizontalBox, VerticalBox } from "widgets/layout.slint";
 
 
 export component ObjectToolPanel inherits VerticalBox {
@@ -98,7 +98,7 @@ export component ObjectToolPanel inherits VerticalBox {
                 text: @tr("Name:");
             }
 
-            HorizontalBox {
+            Box {
                 j-padding: 0px;
 
                 Text {
@@ -110,14 +110,14 @@ export component ObjectToolPanel inherits VerticalBox {
                 }
             }
 
-            HorizontalBox {
+            Box {
                 width: Metrics.size-md;
                 j-elevation: 3;
 
                 Rectangle { }
             }
 
-            HorizontalBox {
+            Box {
                 width: Metrics.size-md;
                 j-elevation: 3;
 
@@ -125,7 +125,7 @@ export component ObjectToolPanel inherits VerticalBox {
             }
         }
 
-        VerticalBox {
+        Box {
             Text {
                 color: DarkPalette.text[4];
                 font-size: Metrics.font-lg;

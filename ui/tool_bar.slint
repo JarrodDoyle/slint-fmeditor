@@ -1,13 +1,12 @@
 import { Metrics, DarkPalette } from "theme.slint";
 import { Button } from "std-widgets.slint";
 import { HorizontalSeparator } from "widgets/separator.slint";
-import { VerticalBox } from "widgets/layout.slint";
+import { Box, VerticalBox } from "widgets/layout.slint";
 
-component ToolBarItem inherits Rectangle {
+component ToolBarItem inherits Box {
     width: Metrics.size-lg;
     height: Metrics.size-lg;
-    border-radius: Metrics.radius-md;
-    background: DarkPalette.background[2];
+    j-elevation: 2;
 }
 
 export component ToolBar inherits VerticalBox {
