@@ -1,0 +1,65 @@
+import { Metrics, DarkPalette } from "../theme.slint";
+
+export component Button {
+    in property <string> p-text;
+    in property <image> p-icon;
+    in property <bool> p-primary;
+    in property <bool> p-shadow;
+    in property <bool> p-enabled: true;
+    in property <int> p-elevation: 1;
+    in property <length> p-radius: Metrics.radius-md;
+
+    callback a-clicked;
+
+    private property <brush> p-text-color: DarkPalette.text[4];
+    private property <float> p-opacity: root.p-enabled ? 1.0 : 0.5;
+    private property <brush> p-background: root.p-primary ? DarkPalette.primary[p-elevation] : DarkPalette.secondary[p-elevation];
+    private property <brush> p-touch-color: root.p-primary ? DarkPalette.primary[p-elevation + 1] : DarkPalette.secondary[p-elevation + 1];
+
+    c-background := Rectangle {
+        width: 100%;
+        height: 100%;
+        border-radius: root.p-radius;
+        background: root.p-background;
+        opacity: root.p-opacity;
+        drop-shadow-color: DarkPalette.background[0];
+        drop-shadow-offset-y: root.p-shadow ? 1px : 0px;
+        drop-shadow-blur: (root.p-shadow ? p-elevation : 0) * 2px;
+    }
+
+    c-touch-area := TouchArea {
+        width: 100%;
+        height: 100%;
+
+        clicked => {
+            root.a-clicked();
+        }
+
+        if self.has-hover: Rectangle {
+            border-radius: root.p-radius;
+            background: root.p-touch-color;
+            opacity: 0.5;
+        }
+
+        if self.pressed: Rectangle {
+            border-radius: root.p-radius;
+            background: root.p-touch-color;
+        }
+    }
+
+    c-layout := HorizontalLayout {
+        if (root.p-icon.width > 0 && root.p-icon.height > 0): c-icon := Image {
+            source <=> root.p-icon;
+            width: Metrics.size-md;
+            opacity: root.p-opacity;
+        }
+
+        if (root.p-text != ""): c-text := Text {
+            text: root.p-text;
+            color: root.p-text-color;
+            opacity: root.p-opacity;
+            vertical-alignment: center;
+            horizontal-alignment: center;
+        }
+    }
+}
