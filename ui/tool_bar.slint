@@ -1,57 +1,50 @@
-import { Metrics } from "theme.slint";
+import { Metrics, DarkPalette } from "theme.slint";
 import { Button } from "std-widgets.slint";
 import { HorizontalSeparator } from "widgets/separator.slint";
+import { VerticalBox } from "widgets/layout.slint";
 
 component ToolBarItem inherits Rectangle {
     width: Metrics.size-lg;
     height: Metrics.size-lg;
-    border-color: black;
-    border-width: 1px;
     border-radius: Metrics.radius-md;
+    background: DarkPalette.background[2];
 }
 
-export component ToolBar inherits Rectangle {
+export component ToolBar inherits VerticalBox {
     width: Metrics.size-xl;
-    border-color: black;
-    border-width: 1px;
+    j-rounding: Metrics.radius-md;
 
-    VerticalLayout {
-        alignment: start;
-        padding: Metrics.padding-md;
-        spacing: Metrics.padding-md;
-
-        Button {
-            checkable: true;
-        }
-
-        ToolBarItem { }
-
-        ToolBarItem { }
-
-        ToolBarItem { }
-
-        ToolBarItem { }
-
-        HorizontalSeparator { }
-
-        ToolBarItem { }
-
-        ToolBarItem { }
-
-        ToolBarItem { }
-
-        ToolBarItem { }
-
-        ToolBarItem { }
-
-        ToolBarItem { }
-
-        HorizontalSeparator { }
-
-        ToolBarItem { }
-
-        ToolBarItem { }
-
-        ToolBarItem { }
+    Button {
+        checkable: true;
     }
+
+    ToolBarItem { }
+
+    ToolBarItem { }
+
+    ToolBarItem { }
+
+    ToolBarItem { }
+
+    HorizontalSeparator { }
+
+    ToolBarItem { }
+
+    ToolBarItem { }
+
+    ToolBarItem { }
+
+    ToolBarItem { }
+
+    ToolBarItem { }
+
+    ToolBarItem { }
+
+    HorizontalSeparator { }
+
+    ToolBarItem { }
+
+    ToolBarItem { }
+
+    ToolBarItem { }
 }

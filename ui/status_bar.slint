@@ -1,29 +1,27 @@
-import { Metrics } from "theme.slint";
+import { Metrics, DarkPalette } from "theme.slint";
 import { VerticalSeparator } from "widgets/separator.slint";
+import { HorizontalBox } from "widgets/layout.slint";
 
-export component StatusBar inherits Rectangle {
-    border-color: black;
-    border-width: 1px;
+export component StatusBar inherits HorizontalBox {
     height: Metrics.size-lg;
-    HorizontalLayout {
-        alignment: start;
-        padding-left: Metrics.padding-lg;
-        padding-right: Metrics.padding-lg;
-        spacing: Metrics.padding-lg;
-        Text {
-            font-size: Metrics.font-md;
-            vertical-alignment: center;
-            text: "Last saved: 18:50";
-        }
+    j-rounding: Metrics.radius-md;
+    j-spacing: Metrics.spacing-lg;
 
-        VerticalSeparator { }
-
-        Text {
-            font-size: Metrics.font-md;
-            vertical-alignment: center;
-            text: "Saved by: Jayrude";
-        }
-
-        VerticalSeparator { }
+    Text {
+        color: DarkPalette.text[4];
+        font-size: Metrics.font-md;
+        vertical-alignment: center;
+        text: "Last saved: 18:50";
     }
+
+    VerticalSeparator { }
+
+    Text {
+        color: DarkPalette.text[4];
+        font-size: Metrics.font-md;
+        vertical-alignment: center;
+        text: "Saved by: Jayrude";
+    }
+
+    VerticalSeparator { }
 }

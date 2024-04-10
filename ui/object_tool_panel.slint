@@ -1,159 +1,147 @@
-import { Metrics } from "theme.slint";
+import { Metrics, DarkPalette } from "theme.slint";
 import { Panel } from "widgets/panel.slint";
+import { HorizontalBox, VerticalBox } from "widgets/layout.slint";
 
-export component ObjectToolPanel inherits Rectangle {
+
+export component ObjectToolPanel inherits VerticalBox {
     width: 280px;
-    border-color: black;
-    border-width: 1px;
+    j-rounding: Metrics.radius-md;
+    j-alignment: stretch;
 
-    VerticalLayout {
-        padding: Metrics.padding-md;
-        spacing: Metrics.spacing-md;
+    Text {
+        height: Metrics.size-md;
+        color: DarkPalette.text[4];
+        font-size: Metrics.font-lg;
+        text: @tr("Object Tool");
+        vertical-alignment: center;
+    }
 
-        HorizontalLayout {
-            height: Metrics.size-md;
+    Panel {
+        title: @tr("Favourites");
+        j-elevation: 2;
+
+        Panel {
+            title: "Group Name";
+            title-alignment: center;
+            j-spacing: 0px;
+
             Text {
-                font-size: Metrics.font-lg;
-                text: @tr("Object Tool");
+                height: Metrics.size-md;
+                color: DarkPalette.text[4];
+                font-size: Metrics.font-md;
+                text: "Object Name";
+                vertical-alignment: center;
+            }
+
+            Text {
+                height: Metrics.size-md;
+                color: DarkPalette.text[4];
+                font-size: Metrics.font-md;
+                text: "Object Name";
+                vertical-alignment: center;
+            }
+
+            Text {
+                height: Metrics.size-md;
+                color: DarkPalette.text[4];
+                font-size: Metrics.font-md;
+                text: "Object Name";
                 vertical-alignment: center;
             }
         }
 
         Panel {
-            title: @tr("Favourites");
+            title: "Group Name";
+            title-alignment: center;
+            j-spacing: 0px;
 
-            Panel {
-                title: "Group Name";
-                title-alignment: center;
-                content-padding: 0px;
-                content-spacing: 0px;
-                HorizontalLayout {
-                    height: Metrics.size-md;
-                    padding-left: Metrics.padding-md;
-                    padding-right: Metrics.padding-md;
-                    Text {
-                        font-size: Metrics.font-md;
-                        text: "Object Name";
-                        vertical-alignment: center;
-                    }
-                }
+            Text {
+                height: Metrics.size-md;
+                color: DarkPalette.text[4];
+                font-size: Metrics.font-md;
+                text: "Object Name";
+                vertical-alignment: center;
+            }
 
-                HorizontalLayout {
-                    height: Metrics.size-md;
-                    padding-left: Metrics.padding-md;
-                    padding-right: Metrics.padding-md;
-                    Text {
-                        font-size: Metrics.font-md;
-                        text: "Object Name";
-                        vertical-alignment: center;
-                    }
-                }
+            Text {
+                height: Metrics.size-md;
+                color: DarkPalette.text[4];
+                font-size: Metrics.font-md;
+                text: "Object Name";
+                vertical-alignment: center;
+            }
 
-                HorizontalLayout {
-                    height: Metrics.size-md;
-                    padding-left: Metrics.padding-md;
-                    padding-right: Metrics.padding-md;
-                    Text {
-                        font-size: Metrics.font-md;
-                        text: "Object Name";
-                        vertical-alignment: center;
-                    }
+            Text {
+                height: Metrics.size-md;
+                color: DarkPalette.text[4];
+                font-size: Metrics.font-md;
+                text: "Object Name";
+                vertical-alignment: center;
+            }
+        }
+    }
+
+    Panel {
+        title: @tr("Hierarchy");
+        j-elevation: 2;
+        j-alignment: stretch;
+        vertical-stretch: 1;
+
+        HorizontalBox {
+            j-alignment: stretch;
+            j-elevation: 2;
+            j-padding: 0px;
+            j-spacing: Metrics.spacing-md;
+            height: Metrics.size-md;
+
+            Text {
+                color: DarkPalette.text[4];
+                font-size: Metrics.font-md;
+                vertical-alignment: center;
+                text: @tr("Name:");
+            }
+
+            HorizontalBox {
+                j-alignment: stretch;
+                j-rounding: Metrics.radius-md;
+                j-padding: 0px;
+
+                Text {
+                    color: DarkPalette.text[4];
+                    font-size: Metrics.font-md;
+                    vertical-alignment: center;
+                    horizontal-alignment: center;
+                    text: "VicHutch (-514)";
                 }
             }
 
-            Panel {
-                title: "Group Name";
-                title-alignment: center;
-                content-padding: 0px;
-                content-spacing: 0px;
-                HorizontalLayout {
-                    height: Metrics.size-md;
-                    padding-left: Metrics.padding-md;
-                    padding-right: Metrics.padding-md;
-                    Text {
-                        font-size: Metrics.font-md;
-                        text: "Object Name";
-                        vertical-alignment: center;
-                    }
-                }
+            HorizontalBox {
+                width: Metrics.size-md;
+                j-rounding: Metrics.radius-md;
+                j-elevation: 3;
 
-                HorizontalLayout {
-                    height: Metrics.size-md;
-                    padding-left: Metrics.padding-md;
-                    padding-right: Metrics.padding-md;
-                    Text {
-                        font-size: Metrics.font-md;
-                        text: "Object Name";
-                        vertical-alignment: center;
-                    }
-                }
+                Rectangle { }
+            }
 
-                HorizontalLayout {
-                    height: Metrics.size-md;
-                    padding-left: Metrics.padding-md;
-                    padding-right: Metrics.padding-md;
-                    Text {
-                        font-size: Metrics.font-md;
-                        text: "Object Name";
-                        vertical-alignment: center;
-                    }
-                }
+            HorizontalBox {
+                width: Metrics.size-md;
+                j-rounding: Metrics.radius-md;
+                j-elevation: 3;
+
+                Rectangle { }
             }
         }
 
-        Panel {
-            title: @tr("Hierarchy");
-            HorizontalLayout {
-                spacing: Metrics.spacing-md;
-                height: Metrics.size-md;
-                Text {
-                    font-size: Metrics.font-md;
-                    vertical-alignment: center;
-                    text: @tr("Name:");
-                }
+        VerticalBox {
+            j-alignment: stretch;
+            j-rounding: Metrics.radius-md;
 
-                Rectangle {
-                    border-color: black;
-                    border-width: 1px;
-                    border-radius: Metrics.radius-md;
-
-                    Text {
-                        font-size: Metrics.font-md;
-                        vertical-alignment: center;
-                        horizontal-alignment: left;
-                        text: "VicHutch (-514)";
-                    }
-                }
-
-                Rectangle {
-                    border-color: black;
-                    border-width: 1px;
-                    border-radius: Metrics.radius-md;
-
-                    width: Metrics.size-md;
-                }
-
-                Rectangle {
-                    border-color: black;
-                    border-width: 1px;
-                    border-radius: Metrics.radius-md;
-
-                    width: Metrics.size-md;
-                }
-            }
-
-            Rectangle {
-                border-color: black;
-                border-width: 1px;
-                border-radius: Metrics.radius-md;
-                clip: true;
-
-                Text {
-                    font-size: Metrics.font-lg;
-                    text: "INSERT TREE VIEW HERE";
-                    vertical-alignment: center;
-                    horizontal-alignment: center;
-                }
+            Text {
+                color: DarkPalette.text[4];
+                font-size: Metrics.font-lg;
+                text: "INSERT TREE VIEW HERE";
+                vertical-alignment: center;
+                horizontal-alignment: center;
             }
         }
     }

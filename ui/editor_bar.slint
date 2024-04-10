@@ -1,18 +1,15 @@
-import { Metrics } from "theme.slint";
+import { Metrics, DarkPalette } from "theme.slint";
+import { HorizontalBox } from "widgets/layout.slint";
 
-export component EditorBar inherits Rectangle {
+export component EditorBar inherits HorizontalBox {
     height: Metrics.size-xl;
-    border-color: black;
-    border-width: 1px;
+    j-spacing: Metrics.spacing-xl;
+    j-rounding: Metrics.radius-md;
 
-    HorizontalLayout {
-        alignment: start;
-        padding: Metrics.padding-md;
-        spacing: Metrics.padding-xl;
-        Text {
-            font-size: Metrics.font-md;
-            vertical-alignment: center;
-            text: "Damn look at all the options and shit here it's like Hammer 2!!";
-        }
+    Text {
+        color: DarkPalette.text[4];
+        font-size: Metrics.font-md;
+        vertical-alignment: center;
+        text: "Damn look at all the options and shit here it's like Hammer 2!!";
     }
 }

@@ -1,17 +1,28 @@
-import { Metrics } from "theme.slint";
+import { Metrics, DarkPalette } from "theme.slint";
 import { EditorBar } from "editor_bar.slint";
 import { StatusBar } from "status_bar.slint";
 import { ToolBar } from "tool_bar.slint";
 import { ObjectToolPanel } from "object_tool_panel.slint";
+import { VerticalBox, HorizontalBox } from "widgets/layout.slint";
+import { VerticalSeparator } from "widgets/separator.slint";
 
 export component AppWindow inherits Window {
     title: @tr("FM Editor");
     preferred-width: 1280px;
     preferred-height: 720px;
-    VerticalLayout {
+    VerticalBox {
+        j-padding: Metrics.padding-sm;
+        j-spacing: Metrics.spacing-sm;
+        j-alignment: stretch;
+        background: DarkPalette.background[0];
         EditorBar { }
 
-        HorizontalLayout {
+        HorizontalBox {
+            j-alignment: stretch;
+            background: DarkPalette.background[0];
+            j-padding: 0px;
+            j-spacing: Metrics.spacing-sm;
+
             ToolBar { }
 
             ObjectToolPanel { }
