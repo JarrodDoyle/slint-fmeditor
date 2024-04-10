@@ -1,49 +1,71 @@
 import { Metrics, DarkPalette } from "theme.slint";
-import { Button } from "std-widgets.slint";
 import { HorizontalSeparator } from "widgets/separator.slint";
 import { Box, VerticalBox } from "widgets/layout.slint";
+import { Button } from "widgets/button.slint";
 
-component ToolBarItem inherits Box {
+component ToolBarItem inherits Button {
     width: Metrics.size-lg;
     height: Metrics.size-lg;
-    j-elevation: 2;
+    p-elevation: 0;
 }
 
 export component ToolBar inherits VerticalBox {
     width: Metrics.size-xl;
     j-alignment: start;
 
-    Button {
-        checkable: true;
+    ToolBarItem {
+        p-text: "s";
     }
 
-    ToolBarItem { }
+    ToolBarItem {
+        p-text: "m";
+    }
 
-    ToolBarItem { }
+    ToolBarItem {
+        p-text: "r";
+    }
 
-    ToolBarItem { }
-
-    ToolBarItem { }
-
-    HorizontalSeparator { }
-
-    ToolBarItem { }
-
-    ToolBarItem { }
-
-    ToolBarItem { }
-
-    ToolBarItem { }
-
-    ToolBarItem { }
-
-    ToolBarItem { }
+    ToolBarItem {
+        p-text: "s";
+    }
 
     HorizontalSeparator { }
 
-    ToolBarItem { }
+    ToolBarItem {
+        p-text: "b";
+    }
 
-    ToolBarItem { }
+    ToolBarItem {
+        p-text: "o";
+    }
 
-    ToolBarItem { }
+    ToolBarItem {
+        p-text: "f";
+    }
+
+    ToolBarItem {
+        p-text: "r";
+    }
+
+    ToolBarItem {
+        p-text: "l";
+    }
+
+    ToolBarItem {
+        p-text: "a";
+    }
+
+    HorizontalSeparator { }
+
+    ToolBarItem {
+        p-text: "t";
+    }
+
+    ToolBarItem {
+        p-text: "t";
+    }
+
+    ToolBarItem {
+        p-text: "m";
+    }
 }
