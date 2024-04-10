@@ -1,0 +1,43 @@
+import {Metrics, DarkPalette} from "../theme.slint";
+
+struct BorderStyle {
+    border-width: length,
+    border-color: brush,
+    border-radius: length,
+}
+
+export component HorizontalBox inherits Rectangle {
+    // TODO: border, shadow
+    in property <length> j-rounding: 0px;
+    in property <length> j-padding: Metrics.padding-md;
+    in property <length> j-spacing: Metrics.spacing-md;
+    in property <LayoutAlignment> j-alignment: start;
+
+    background: DarkPalette.background[1];
+    border-radius: j-rounding;
+
+    HorizontalLayout {
+        alignment: j-alignment;
+        padding: j-padding;
+        spacing: j-spacing;
+        @children
+    }
+}
+
+export component VerticalBox inherits Rectangle {
+    // TODO: border, shadow
+    in property <length> j-rounding: 0px;
+    in property <length> j-padding: Metrics.padding-md;
+    in property <length> j-spacing: Metrics.spacing-md;
+    in property <LayoutAlignment> j-alignment: start;
+
+    background: DarkPalette.background[1];
+    border-radius: j-rounding;
+
+    VerticalLayout {
+        alignment: j-alignment;
+        padding: j-padding;
+        spacing: j-spacing;
+        @children
+    }
+}
