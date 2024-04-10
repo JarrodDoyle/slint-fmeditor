@@ -9,7 +9,7 @@ struct BorderStyle {
 export component HorizontalBox inherits Rectangle {
     // TODO: border, shadow
     in property <int> j-elevation: 1;
-    in property <length> j-rounding: 0px;
+    in property <length> j-rounding: Metrics.radius-md;
     in property <length> j-padding: Metrics.padding-md;
     in property <length> j-spacing: Metrics.spacing-md;
     in property <LayoutAlignment> j-alignment: start;
@@ -29,7 +29,7 @@ export component HorizontalBox inherits Rectangle {
 export component VerticalBox inherits Rectangle {
     // TODO: border, shadow
     in property <int> j-elevation: 1;
-    in property <length> j-rounding: 0px;
+    in property <length> j-rounding: Metrics.radius-md;
     in property <length> j-padding: Metrics.padding-md;
     in property <length> j-spacing: Metrics.spacing-md;
     in property <LayoutAlignment> j-alignment: start;
