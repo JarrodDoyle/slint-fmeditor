@@ -1,26 +1,43 @@
-export global Theme {
-    in-out property <length> padding-sm: 4px;
-    in-out property <length> padding-md: 8px;
-    in-out property <length> padding-lg: 16px;
-    in-out property <length> padding-xl: 24px;
 
-    in-out property <length> spacing-sm: 4px;
-    in-out property <length> spacing-md: 8px;
-    in-out property <length> spacing-lg: 16px;
-    in-out property <length> spacing-xl: 24px;
+export global DarkPalette {
+    out property <[brush]> text: [#090d10, #263340, #4b6681, #7e99b4, #bfccd9, #eff2f6];
+    out property <[brush]> background: [#090c10, #252e41, #4a5d82, #7d90b5, #bec7da, #eff1f6];
+    out property <[brush]> primary: [#080d12, #203446, #3f678d, #729ac0, #b9cddf, #edf2f7];
+    out property <[brush]> secondary: [#070d12, #1d3349, #396693, #6c99c6, #b6cce2, #edf2f8];
+    out property <[brush]> accent: [#150e05, #523714, #a46e28, #d7a15b, #ebd0ad, #faf3ea];
+}
 
-    in-out property <length> size-sm: 16px;
-    in-out property <length> size-md: 24px;
-    in-out property <length> size-lg: 32px;
-    in-out property <length> size-xl: 48px;
+export global LightPalette {
+    out property <[brush]> text: [#eff3f6, #bfcdd9, #7e9cb4, #4b6981, #263440, #090d10];
+    out property <[brush]> background: [#f0f0f5, #c2c2d6, #8585ad, #52527a, #29293d, #0a0a0f];
+    out property <[brush]> primary: [#edf2f7, #b9cddf, #729ac0, #3f678d, #203446, #080d12];
+    out property <[brush]> secondary: [#edf2f8, #b6cce2, #6c99c6, #396693, #1d3349, #070d12];
+    out property <[brush]> accent: [#faf3ea, #ebd0ad, #d7a15b, #a46e28, #523714, #150e05];
+}
 
-    in-out property <length> radius-sm: 4px;
-    in-out property <length> radius-md: 8px;
-    in-out property <length> radius-lg: 16px;
-    in-out property <length> radius-xl: 32px;
+export global Metrics {
+    out property <length> padding-sm: 4px;
+    out property <length> padding-md: 8px;
+    out property <length> padding-lg: 16px;
+    out property <length> padding-xl: 24px;
 
-    in-out property <length> font-sm: 10px;
-    in-out property <length> font-md: 12px;
-    in-out property <length> font-lg: 16px;
-    in-out property <length> font-xl: 24px;
+    out property <length> spacing-sm: 4px;
+    out property <length> spacing-md: 8px;
+    out property <length> spacing-lg: 16px;
+    out property <length> spacing-xl: 24px;
+
+    out property <length> size-sm: 16px;
+    out property <length> size-md: 24px;
+    out property <length> size-lg: 32px;
+    out property <length> size-xl: 48px;
+
+    out property <length> radius-sm: 4px;
+    out property <length> radius-md: 8px;
+    out property <length> radius-lg: 16px;
+    out property <length> radius-xl: 32px;
+
+    out property <length> font-sm: 10px;
+    out property <length> font-md: 12px;
+    out property <length> font-lg: 16px;
+    out property <length> font-xl: 24px;
 }

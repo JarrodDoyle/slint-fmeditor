@@ -1,4 +1,4 @@
-import { Theme } from "theme.slint";
+import { Metrics } from "theme.slint";
 import { EditorBar } from "editor_bar.slint";
 import { StatusBar } from "status_bar.slint";
 import { ToolBar } from "tool_bar.slint";
@@ -18,7 +18,7 @@ export component AppWindow inherits Window {
 
             Rectangle {
                 Text {
-                    font-size: Theme.font-lg;
+                    font-size: Metrics.font-lg;
                     text: "INSERT VIEWPORT HERE";
                     vertical-alignment: center;
                     horizontal-alignment: center;

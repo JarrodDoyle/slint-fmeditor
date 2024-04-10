@@ -1,17 +1,17 @@
-import { Theme } from "theme.slint";
+import { Metrics } from "theme.slint";
 import { VerticalSeparator } from "widgets/separator.slint";
 
 export component StatusBar inherits Rectangle {
     border-color: black;
     border-width: 1px;
-    height: Theme.size-lg;
+    height: Metrics.size-lg;
     HorizontalLayout {
         alignment: start;
-        padding-left: Theme.padding-lg;
-        padding-right: Theme.padding-lg;
-        spacing: Theme.padding-lg;
+        padding-left: Metrics.padding-lg;
+        padding-right: Metrics.padding-lg;
+        spacing: Metrics.padding-lg;
         Text {
-            font-size: Theme.font-md;
+            font-size: Metrics.font-md;
             vertical-alignment: center;
             text: "Last saved: 18:50";
         }
@@ -19,7 +19,7 @@ export component StatusBar inherits Rectangle {
         VerticalSeparator { }
 
         Text {
-            font-size: Theme.font-md;
+            font-size: Metrics.font-md;
             vertical-alignment: center;
             text: "Saved by: Jayrude";
         }

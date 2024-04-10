@@ -1,26 +1,26 @@
-import { Theme } from "../theme.slint";
+import { Metrics } from "../theme.slint";
 
 export component Panel inherits Rectangle {
     in property <string> title: "Title";
     in property <TextHorizontalAlignment> title-alignment: left;
-    in property <length> content-padding: Theme.padding-md;
-    in property <length> content-spacing: Theme.spacing-md;
+    in property <length> content-padding: Metrics.padding-md;
+    in property <length> content-spacing: Metrics.spacing-md;
 
     border-color: black;
     border-width: 1px;
-    border-radius: Theme.radius-md;
+    border-radius: Metrics.radius-md;
     clip: true;
 
     VerticalLayout {
         Rectangle {
-            height: Theme.size-md;
+            height: Metrics.size-md;
             border-color: black;
             border-width: 1px;
             HorizontalLayout {
-                padding-left: Theme.padding-md;
-                padding-right: Theme.padding-md;
+                padding-left: Metrics.padding-md;
+                padding-right: Metrics.padding-md;
                 Text {
-                    font-size: Theme.font-md;
+                    font-size: Metrics.font-md;
                     text: title;
                     vertical-alignment: center;
                     horizontal-alignment: title-alignment;

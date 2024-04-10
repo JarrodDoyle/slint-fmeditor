@@ -1,4 +1,4 @@
-import { Theme } from "theme.slint";
+import { Metrics } from "theme.slint";
 import { Panel } from "widgets/panel.slint";
 
 export component ObjectToolPanel inherits Rectangle {
@@ -7,13 +7,13 @@ export component ObjectToolPanel inherits Rectangle {
     border-width: 1px;
 
     VerticalLayout {
-        padding: Theme.padding-md;
-        spacing: Theme.spacing-md;
+        padding: Metrics.padding-md;
+        spacing: Metrics.spacing-md;
 
         HorizontalLayout {
-            height: Theme.size-md;
+            height: Metrics.size-md;
             Text {
-                font-size: Theme.font-lg;
+                font-size: Metrics.font-lg;
                 text: @tr("Object Tool");
                 vertical-alignment: center;
             }
@@ -28,33 +28,33 @@ export component ObjectToolPanel inherits Rectangle {
                 content-padding: 0px;
                 content-spacing: 0px;
                 HorizontalLayout {
-                    height: Theme.size-md;
-                    padding-left: Theme.padding-md;
-                    padding-right: Theme.padding-md;
+                    height: Metrics.size-md;
+                    padding-left: Metrics.padding-md;
+                    padding-right: Metrics.padding-md;
                     Text {
-                        font-size: Theme.font-md;
+                        font-size: Metrics.font-md;
                         text: "Object Name";
                         vertical-alignment: center;
                     }
                 }
 
                 HorizontalLayout {
-                    height: Theme.size-md;
-                    padding-left: Theme.padding-md;
-                    padding-right: Theme.padding-md;
+                    height: Metrics.size-md;
+                    padding-left: Metrics.padding-md;
+                    padding-right: Metrics.padding-md;
                     Text {
-                        font-size: Theme.font-md;
+                        font-size: Metrics.font-md;
                         text: "Object Name";
                         vertical-alignment: center;
                     }
                 }
 
                 HorizontalLayout {
-                    height: Theme.size-md;
-                    padding-left: Theme.padding-md;
-                    padding-right: Theme.padding-md;
+                    height: Metrics.size-md;
+                    padding-left: Metrics.padding-md;
+                    padding-right: Metrics.padding-md;
                     Text {
-                        font-size: Theme.font-md;
+                        font-size: Metrics.font-md;
                         text: "Object Name";
                         vertical-alignment: center;
                     }
@@ -67,33 +67,33 @@ export component ObjectToolPanel inherits Rectangle {
                 content-padding: 0px;
                 content-spacing: 0px;
                 HorizontalLayout {
-                    height: Theme.size-md;
-                    padding-left: Theme.padding-md;
-                    padding-right: Theme.padding-md;
+                    height: Metrics.size-md;
+                    padding-left: Metrics.padding-md;
+                    padding-right: Metrics.padding-md;
                     Text {
-                        font-size: Theme.font-md;
+                        font-size: Metrics.font-md;
                         text: "Object Name";
                         vertical-alignment: center;
                     }
                 }
 
                 HorizontalLayout {
-                    height: Theme.size-md;
-                    padding-left: Theme.padding-md;
-                    padding-right: Theme.padding-md;
+                    height: Metrics.size-md;
+                    padding-left: Metrics.padding-md;
+                    padding-right: Metrics.padding-md;
                     Text {
-                        font-size: Theme.font-md;
+                        font-size: Metrics.font-md;
                         text: "Object Name";
                         vertical-alignment: center;
                     }
                 }
 
                 HorizontalLayout {
-                    height: Theme.size-md;
-                    padding-left: Theme.padding-md;
-                    padding-right: Theme.padding-md;
+                    height: Metrics.size-md;
+                    padding-left: Metrics.padding-md;
+                    padding-right: Metrics.padding-md;
                     Text {
-                        font-size: Theme.font-md;
+                        font-size: Metrics.font-md;
                         text: "Object Name";
                         vertical-alignment: center;
                     }
@@ -104,10 +104,10 @@ export component ObjectToolPanel inherits Rectangle {
         Panel {
             title: @tr("Hierarchy");
             HorizontalLayout {
-                spacing: Theme.spacing-md;
-                height: Theme.size-md;
+                spacing: Metrics.spacing-md;
+                height: Metrics.size-md;
                 Text {
-                    font-size: Theme.font-md;
+                    font-size: Metrics.font-md;
                     vertical-alignment: center;
                     text: @tr("Name:");
                 }
@@ -115,10 +115,10 @@ export component ObjectToolPanel inherits Rectangle {
                 Rectangle {
                     border-color: black;
                     border-width: 1px;
-                    border-radius: Theme.radius-md;
+                    border-radius: Metrics.radius-md;
 
                     Text {
-                        font-size: Theme.font-md;
+                        font-size: Metrics.font-md;
                         vertical-alignment: center;
                         horizontal-alignment: left;
                         text: "VicHutch (-514)";
@@ -128,28 +128,28 @@ export component ObjectToolPanel inherits Rectangle {
                 Rectangle {
                     border-color: black;
                     border-width: 1px;
-                    border-radius: Theme.radius-md;
+                    border-radius: Metrics.radius-md;
 
-                    width: Theme.size-md;
+                    width: Metrics.size-md;
                 }
 
                 Rectangle {
                     border-color: black;
                     border-width: 1px;
-                    border-radius: Theme.radius-md;
+                    border-radius: Metrics.radius-md;
 
-                    width: Theme.size-md;
+                    width: Metrics.size-md;
                 }
             }
 
             Rectangle {
                 border-color: black;
                 border-width: 1px;
-                border-radius: Theme.radius-md;
+                border-radius: Metrics.radius-md;
                 clip: true;
 
                 Text {
-                    font-size: Theme.font-lg;
+                    font-size: Metrics.font-lg;
                     text: "INSERT TREE VIEW HERE";
                     vertical-alignment: center;
                     horizontal-alignment: center;

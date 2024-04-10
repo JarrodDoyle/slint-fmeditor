@@ -1,24 +1,24 @@
-import { Theme } from "theme.slint";
+import { Metrics } from "theme.slint";
 import { Button } from "std-widgets.slint";
 import { HorizontalSeparator } from "widgets/separator.slint";
 
 component ToolBarItem inherits Rectangle {
-    width: Theme.size-lg;
-    height: Theme.size-lg;
+    width: Metrics.size-lg;
+    height: Metrics.size-lg;
     border-color: black;
     border-width: 1px;
-    border-radius: Theme.radius-md;
+    border-radius: Metrics.radius-md;
 }
 
 export component ToolBar inherits Rectangle {
-    width: Theme.size-xl;
+    width: Metrics.size-xl;
     border-color: black;
     border-width: 1px;
 
     VerticalLayout {
         alignment: start;
-        padding: Theme.padding-md;
-        spacing: Theme.padding-md;
+        padding: Metrics.padding-md;
+        spacing: Metrics.padding-md;
 
         Button {
             checkable: true;
