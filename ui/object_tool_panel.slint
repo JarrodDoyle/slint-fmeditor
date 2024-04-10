@@ -5,7 +5,6 @@ import { HorizontalBox, VerticalBox } from "widgets/layout.slint";
 
 export component ObjectToolPanel inherits VerticalBox {
     width: 280px;
-    j-alignment: stretch;
 
     Text {
         height: Metrics.size-md;
@@ -16,6 +15,7 @@ export component ObjectToolPanel inherits VerticalBox {
     }
 
     Panel {
+        j-alignment: start;
         title: @tr("Favourites");
         j-elevation: 2;
 
@@ -83,11 +83,9 @@ export component ObjectToolPanel inherits VerticalBox {
     Panel {
         title: @tr("Hierarchy");
         j-elevation: 2;
-        j-alignment: stretch;
         vertical-stretch: 1;
 
         HorizontalBox {
-            j-alignment: stretch;
             j-elevation: 2;
             j-padding: 0px;
             j-spacing: Metrics.spacing-md;
@@ -101,7 +99,6 @@ export component ObjectToolPanel inherits VerticalBox {
             }
 
             HorizontalBox {
-                j-alignment: stretch;
                 j-padding: 0px;
 
                 Text {
@@ -129,8 +126,6 @@ export component ObjectToolPanel inherits VerticalBox {
         }
 
         VerticalBox {
-            j-alignment: stretch;
-
             Text {
                 color: DarkPalette.text[4];
                 font-size: Metrics.font-lg;
