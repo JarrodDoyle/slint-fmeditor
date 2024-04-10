@@ -15,14 +15,14 @@ export component ObjectToolPanel inherits VerticalBox {
     }
 
     Panel {
-        j-alignment: start;
-        title: @tr("Favourites");
-        j-elevation: 2;
+        p-alignment: start;
+        p-title: @tr("Favourites");
+        p-elevation: 2;
 
         Panel {
-            title: "Group Name";
-            title-alignment: center;
-            j-spacing: 0px;
+            p-title: "Group Name";
+            p-title-alignment: center;
+            p-spacing: 0px;
 
             Text {
                 height: Metrics.size-md;
@@ -50,9 +50,9 @@ export component ObjectToolPanel inherits VerticalBox {
         }
 
         Panel {
-            title: "Group Name";
-            title-alignment: center;
-            j-spacing: 0px;
+            p-title: "Group Name";
+            p-title-alignment: center;
+            p-spacing: 0px;
 
             Text {
                 height: Metrics.size-md;
@@ -81,14 +81,14 @@ export component ObjectToolPanel inherits VerticalBox {
     }
 
     Panel {
-        title: @tr("Hierarchy");
-        j-elevation: 2;
+        p-title: @tr("Hierarchy");
+        p-elevation: 2;
         vertical-stretch: 1;
 
         HorizontalBox {
-            j-elevation: 2;
-            j-padding: 0px;
-            j-spacing: Metrics.spacing-md;
+            p-elevation: 2;
+            p-padding: 0px;
+            p-spacing: Metrics.spacing-md;
             height: Metrics.size-md;
 
             Text {
@@ -99,7 +99,7 @@ export component ObjectToolPanel inherits VerticalBox {
             }
 
             Box {
-                j-padding: 0px;
+                p-padding: 0px;
 
                 Text {
                     color: DarkPalette.text[4];
@@ -112,14 +112,14 @@ export component ObjectToolPanel inherits VerticalBox {
 
             Box {
                 width: Metrics.size-md;
-                j-elevation: 3;
+                p-elevation: 3;
 
                 Rectangle { }
             }
 
             Box {
                 width: Metrics.size-md;
-                j-elevation: 3;
+                p-elevation: 3;
 
                 Rectangle { }
             }

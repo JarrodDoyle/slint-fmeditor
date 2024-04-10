@@ -1,60 +1,54 @@
 import {Metrics, DarkPalette} from "../theme.slint";
 
-struct BorderStyle {
-    border-width: length,
-    border-color: brush,
-    border-radius: length,
-}
-
 export component HorizontalBox inherits Rectangle {
     // TODO: border, shadow
-    in property <int> j-elevation: 1;
-    in property <length> j-rounding: Metrics.radius-md;
-    in property <length> j-padding: Metrics.padding-md;
-    in property <length> j-spacing: Metrics.spacing-md;
-    in property <LayoutAlignment> j-alignment: stretch;
+    in property <int> p-elevation: 1;
+    in property <length> p-rounding: Metrics.radius-md;
+    in property <length> p-padding: Metrics.padding-md;
+    in property <length> p-spacing: Metrics.spacing-md;
+    in property <LayoutAlignment> p-alignment: stretch;
 
-    background: DarkPalette.background[j-elevation];
-    border-radius: j-rounding;
+    background: DarkPalette.background[p-elevation];
+    border-radius: p-rounding;
     clip: true;
 
-    HorizontalLayout {
-        alignment: j-alignment;
-        padding: j-padding;
-        spacing: j-spacing;
+    c-layout := HorizontalLayout {
+        alignment: p-alignment;
+        padding: p-padding;
+        spacing: p-spacing;
         @children
     }
 }
 
 export component VerticalBox inherits Rectangle {
     // TODO: border, shadow
-    in property <int> j-elevation: 1;
-    in property <length> j-rounding: Metrics.radius-md;
-    in property <length> j-padding: Metrics.padding-md;
-    in property <length> j-spacing: Metrics.spacing-md;
-    in property <LayoutAlignment> j-alignment: stretch;
+    in property <int> p-elevation: 1;
+    in property <length> p-rounding: Metrics.radius-md;
+    in property <length> p-padding: Metrics.padding-md;
+    in property <length> p-spacing: Metrics.spacing-md;
+    in property <LayoutAlignment> p-alignment: stretch;
 
-    background: DarkPalette.background[j-elevation];
-    border-radius: j-rounding;
+    background: DarkPalette.background[p-elevation];
+    border-radius: p-rounding;
     clip: true;
 
-    VerticalLayout {
-        alignment: j-alignment;
-        padding: j-padding;
-        spacing: j-spacing;
+    c-layout := VerticalLayout {
+        alignment: p-alignment;
+        padding: p-padding;
+        spacing: p-spacing;
         @children
     }
 }
 
 export component Box inherits Rectangle {
-    in property <int> j-elevation: 1;
-    in property <length> j-rounding: Metrics.radius-md;
-    in property <length> j-padding: Metrics.padding-md;
+    in property <int> p-elevation: 1;
+    in property <length> p-rounding: Metrics.radius-md;
+    in property <length> p-padding: Metrics.padding-md;
 
-    background: DarkPalette.background[j-elevation];
-    border-radius: j-rounding;
+    background: DarkPalette.background[p-elevation];
+    border-radius: p-rounding;
     clip: true;
-    padding: j-padding;
+    padding: p-padding;
 
     @children
 }

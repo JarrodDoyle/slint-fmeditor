@@ -2,16 +2,16 @@ import { Metrics, DarkPalette } from "../theme.slint";
 import { VerticalBox } from "layout.slint";
 
 export component Panel inherits VerticalBox {
-    in property <string> title: "Title";
-    in property <TextHorizontalAlignment> title-alignment: left;
+    in property <string> p-title: "Title";
+    in property <TextHorizontalAlignment> p-title-alignment: left;
 
-    Text {
+    c-title := Text {
         height: Metrics.size-md;
         color: DarkPalette.text[4];
         font-size: Metrics.font-md;
-        text: title;
+        text: p-title;
         vertical-alignment: center;
-        horizontal-alignment: title-alignment;
+        horizontal-alignment: p-title-alignment;
     }
 
     @children
