@@ -29,98 +29,48 @@ export component ToolBar inherits VerticalBox {
 
     out property <ToolType> p-current-tool: ToolType.Select;
 
-    ToolBarItem {
-        p-text: "s";
-        a-clicked => {
-            p-current-tool = ToolType.Select;
-        }
-    }
+    private property <[{text: string, type: ToolType}]> p-transform-tools: [
+        { text: "s", type: ToolType.Select },
+        { text: "m", type: ToolType.Move },
+        { text: "r", type: ToolType.Rotate },
+        { text: "s", type: ToolType.Scale },
+    ];
+    private property <[{text: string, type: ToolType}]> p-brush-tools: [
+        { text: "b", type: ToolType.Brush },
+        { text: "o", type: ToolType.Object },
+        { text: "f", type: ToolType.Flow },
+        { text: "r", type: ToolType.Room },
+        { text: "l", type: ToolType.Light },
+        { text: "a", type: ToolType.Area },
+    ];
+    private property <[{text: string, type: ToolType}]> p-other-tools: [
+        { text: "t", type: ToolType.Texture },
+        { text: "t", type: ToolType.Timeline },
+        { text: "m", type: ToolType.Multibrush },
+    ];
 
-    ToolBarItem {
-        p-text: "m";
+    for item[index] in root.p-transform-tools: ToolBarItem {
+        p-text: item.text;
         a-clicked => {
-            p-current-tool = ToolType.Move;
-        }
-    }
-
-    ToolBarItem {
-        p-text: "r";
-        a-clicked => {
-            p-current-tool = ToolType.Rotate;
-        }
-    }
-
-    ToolBarItem {
-        p-text: "s";
-        a-clicked => {
-            p-current-tool = ToolType.Scale;
-        }
-    }
-
-    HorizontalSeparator { }
-
-    ToolBarItem {
-        p-text: "b";
-        a-clicked => {
-            p-current-tool = ToolType.Brush;
-        }
-    }
-
-    ToolBarItem {
-        p-text: "o";
-        a-clicked => {
-            p-current-tool = ToolType.Object;
-        }
-    }
-
-    ToolBarItem {
-        p-text: "f";
-        a-clicked => {
-            p-current-tool = ToolType.Flow;
-        }
-    }
-
-    ToolBarItem {
-        p-text: "r";
-        a-clicked => {
-            p-current-tool = ToolType.Room;
-        }
-    }
-
-    ToolBarItem {
-        p-text: "l";
-        a-clicked => {
-            p-current-tool = ToolType.Light;
-        }
-    }
-
-    ToolBarItem {
-        p-text: "a";
-        a-clicked => {
-            p-current-tool = ToolType.Area;
+            root.p-current-tool = item.type;
         }
     }
 
     HorizontalSeparator { }
 
-    ToolBarItem {
-        p-text: "t";
+    for item[index] in root.p-brush-tools: ToolBarItem {
+        p-text: item.text;
         a-clicked => {
-            p-current-tool = ToolType.Texture;
+            root.p-current-tool = item.type;
         }
     }
 
-    ToolBarItem {
-        p-text: "t";
-        a-clicked => {
-            p-current-tool = ToolType.Timeline;
-        }
-    }
+    HorizontalSeparator { }
 
-    ToolBarItem {
-        p-text: "m";
+    for item[index] in root.p-other-tools: ToolBarItem {
+        p-text: item.text;
         a-clicked => {
-            p-current-tool = ToolType.Multibrush;
+            root.p-current-tool = item.type;
         }
     }
 }
