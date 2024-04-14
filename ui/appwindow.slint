@@ -3,7 +3,7 @@ import { VerticalBox, HorizontalBox } from "widgets/components.slint";
 
 import { EditorBar } from "editor_bar.slint";
 import { StatusBar } from "status_bar.slint";
-import { ToolBar } from "tool_bar.slint";
+import { ToolBar, ToolType } from "tool_bar.slint";
 import { ObjectToolPanel } from "object_tool_panel.slint";
 
 export component AppWindow inherits Window {
@@ -22,9 +22,9 @@ export component AppWindow inherits Window {
             p-padding: 0px;
             p-spacing: Metrics.spacing-sm;
 
-            ToolBar { }
+            c-toolbar := ToolBar { }
 
-            ObjectToolPanel { }
+            if (c-toolbar.p-current-tool == ToolType.Object): ObjectToolPanel { }
 
             Rectangle {
                 Text {

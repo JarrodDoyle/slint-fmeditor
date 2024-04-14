@@ -1,6 +1,22 @@
 import { Metrics, DarkPalette } from "theme.slint";
 import { Box, Button, HorizontalSeparator, VerticalBox } from "widgets/components.slint";
 
+export enum ToolType {
+    Select,
+    Move,
+    Rotate,
+    Scale,
+    Brush,
+    Light,
+    Area,
+    Object,
+    Flow,
+    Room,
+    Texture,
+    Timeline,
+    Multibrush,
+}
+
 component ToolBarItem inherits Button {
     width: Metrics.size-lg;
     height: Metrics.size-lg;
@@ -11,59 +27,100 @@ export component ToolBar inherits VerticalBox {
     width: Metrics.size-xl;
     p-alignment: start;
 
+    out property <ToolType> p-current-tool: ToolType.Select;
+
     ToolBarItem {
         p-text: "s";
+        a-clicked => {
+            p-current-tool = ToolType.Select;
+        }
     }
 
     ToolBarItem {
         p-text: "m";
+        a-clicked => {
+            p-current-tool = ToolType.Move;
+        }
     }
 
     ToolBarItem {
         p-text: "r";
+        a-clicked => {
+            p-current-tool = ToolType.Rotate;
+        }
     }
 
     ToolBarItem {
         p-text: "s";
+        a-clicked => {
+            p-current-tool = ToolType.Scale;
+        }
     }
 
     HorizontalSeparator { }
 
     ToolBarItem {
         p-text: "b";
+        a-clicked => {
+            p-current-tool = ToolType.Brush;
+        }
     }
 
     ToolBarItem {
         p-text: "o";
+        a-clicked => {
+            p-current-tool = ToolType.Object;
+        }
     }
 
     ToolBarItem {
         p-text: "f";
+        a-clicked => {
+            p-current-tool = ToolType.Flow;
+        }
     }
 
     ToolBarItem {
         p-text: "r";
+        a-clicked => {
+            p-current-tool = ToolType.Room;
+        }
     }
 
     ToolBarItem {
         p-text: "l";
+        a-clicked => {
+            p-current-tool = ToolType.Light;
+        }
     }
 
     ToolBarItem {
         p-text: "a";
+        a-clicked => {
+            p-current-tool = ToolType.Area;
+        }
     }
 
     HorizontalSeparator { }
 
     ToolBarItem {
         p-text: "t";
+        a-clicked => {
+            p-current-tool = ToolType.Texture;
+        }
     }
 
     ToolBarItem {
         p-text: "t";
+        a-clicked => {
+            p-current-tool = ToolType.Timeline;
+        }
     }
 
     ToolBarItem {
         p-text: "m";
+        a-clicked => {
+            p-current-tool = ToolType.Multibrush;
+        }
     }
 }
